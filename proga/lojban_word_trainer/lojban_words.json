@@ -1,0 +1,47 @@
+{
+  "words": [
+    {
+      "word": "tsani",
+      "class": "gismu",
+      "definition": "$x_{1}$ is an expanse of sky/the heavens at place $x_{2}$; [celestial].",
+      "notes": "",
+      "added": "2026-03-21T15:20:13.827Z"
+    },
+    {
+      "word": "prenu",
+      "class": "gismu",
+      "definition": "$x_{1}$ is a person/people (noun) [not necessarily human]; $x_{1}$ displays personality/a persona.",
+      "notes": "",
+      "added": "2026-03-21T15:21:09.778Z"
+    },
+    {
+      "word": "tavla",
+      "class": "gismu",
+      "definition": "$x_{1}$ talks/speaks to $x_{2}$ about subject $x_{3}$ in language $x_{4}$.",
+      "notes": "",
+      "added": "2026-03-21T15:21:53.770Z"
+    },
+    {
+      "word": "mi",
+      "class": "cmavo",
+      "definition": "pro-sumti: me/we the speaker(s)/author(s); identified by self-vocative.",
+      "notes": "",
+      "added": "2026-03-21T15:22:33.490Z"
+    },
+    {
+      "word": "le",
+      "class": "cmavo",
+      "definition": "non-veridical descriptor: the one(s) described as ...",
+      "notes": "",
+      "added": "2026-03-21T15:22:53.482Z"
+    }
+  ],
+  "sentences": [
+    {
+      "sentence": "ti tsani",
+      "word": "tsani",
+      "class": "gismu",
+      "date": "2026-03-21T15:20:32.202Z"
+    }
+  ]
+}
