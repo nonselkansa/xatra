@@ -34,6 +34,244 @@
       "definition": "non-veridical descriptor: the one(s) described as ...",
       "notes": "",
       "added": "2026-03-21T15:22:53.482Z"
+    },
+    {
+      "word": "proga",
+      "class": "gismu",
+      "definition": "$x_1$ is a program, computer application for doing $x_2$ (clause)",
+      "notes": "",
+      "added": "2026-03-21T15:28:24.201Z"
+    },
+    {
+      "word": "do",
+      "class": "cmavo",
+      "definition": "pro-sumti: you listener(s); identified by vocative.",
+      "notes": "",
+      "added": "2026-03-21T15:28:48.073Z"
+    },
+    {
+      "word": "prami",
+      "class": "gismu",
+      "definition": "$x_{1}$ loves/feels strong affectionate devotion towards $x_{2}$ (object/state).",
+      "notes": "",
+      "added": "2026-03-21T15:29:32.865Z"
+    },
+    {
+      "word": "cu",
+      "class": "cmavo",
+      "definition": "elidable marker: separates selbri from preceding sumti, allows preceding terminator elision.",
+      "notes": "",
+      "added": "2026-03-21T15:30:25.513Z"
+    },
+    {
+      "word": "ca",
+      "class": "cmavo",
+      "definition": "time tense relation/direction: is [selbri]; during/simultaneous with [sumti]; present tense.",
+      "notes": "",
+      "added": "2026-03-21T15:30:37.369Z"
+    },
+    {
+      "word": "nintadni",
+      "class": "lujvo",
+      "definition": "$c_2=t_1$ is a beginner in subject $c_1=t_2$ by standard $c_4$",
+      "notes": "",
+      "added": "2026-03-21T15:31:18.337Z"
+    },
+    {
+      "word": "dunda",
+      "class": "gismu",
+      "definition": "$x_{1}$ [donor] gives/donates gift/present $x_{2}$ to recipient/beneficiary $x_{3}$ [without payment/exchange].",
+      "notes": "",
+      "added": "2026-03-21T15:38:16.784Z"
+    },
+    {
+      "word": "pelxu",
+      "class": "gismu",
+      "definition": "$x_{1}$ is yellow/golden [color adjective].",
+      "notes": "",
+      "added": "2026-03-21T15:38:39.928Z"
+    },
+    {
+      "word": "zdani",
+      "class": "gismu",
+      "definition": "$x_{1}$ is a nest/house/lair/den/[home] of/for $x_{2}$.",
+      "notes": "",
+      "added": "2026-03-21T15:39:03.472Z"
+    },
+    {
+      "word": "pendo",
+      "class": "gismu",
+      "definition": "$x_{1}$ is/acts as a friend of/to $x_{2}$ (experiencer); $x_{2}$ befriends $x_{1}$.",
+      "notes": "",
+      "added": "2026-03-21T16:30:24.977Z"
+    },
+    {
+      "word": "mlatu",
+      "class": "gismu",
+      "definition": "$x_{1}$ is a cat/[puss/pussy/kitten] [feline animal] of species/breed $x_{2}$; (adjective:) $x_{1}$ is feline.",
+      "notes": "",
+      "added": "2026-03-21T16:30:51.601Z"
+    },
+    {
+      "word": "ctuca",
+      "class": "gismu",
+      "definition": "$x_{1}$ teaches audience $x_{2}$ ideas/methods/lore $x_{3}$ (du'u) about subject(s) $x_{4}$ by method $x_{5}$ (event).",
+      "notes": "",
+      "added": "2026-03-21T16:31:17.601Z"
+    },
+    {
+      "word": "nelci",
+      "class": "gismu",
+      "definition": "$x_{1}$ is fond of/likes/has a taste for $x_{2}$ (object/state).",
+      "notes": "",
+      "added": "2026-03-21T16:31:40.969Z"
+    },
+    {
+      "word": "gerku",
+      "class": "gismu",
+      "definition": "$x_{1}$ is a dog/canine/[bitch] of species/breed $x_{2}$.",
+      "notes": "",
+      "added": "2026-03-21T16:31:59.433Z"
+    },
+    {
+      "word": "melbi",
+      "class": "gismu",
+      "definition": "$x_{1}$ is beautiful/pleasant to $x_{2}$ in aspect $x_{3}$ (ka) by aesthetic standard $x_{4}$.",
+      "notes": "",
+      "added": "2026-03-21T16:32:27.073Z"
+    },
+    {
+      "word": "sutra",
+      "class": "gismu",
+      "definition": "$x_{1}$ is fast/swift/quick/hastes/rapid at doing/being/bringing about $x_{2}$ (event/state).",
+      "notes": "",
+      "added": "2026-03-21T16:32:49.730Z"
+    },
+    {
+      "word": "lojbo",
+      "class": "gismu",
+      "definition": "$x_{1}$ reflects [Loglandic]/Lojbanic language/culture/nationality/community in aspect $x_{2}$.",
+      "notes": "",
+      "added": "2026-03-21T16:33:11.328Z"
+    },
+    {
+      "word": "ciska",
+      "class": "gismu",
+      "definition": "$x_{1}$ inscribes/writes $x_{2}$ on display/storage medium $x_{3}$ with writing implement $x_{4}$; $x_{1}$ is a scribe.",
+      "notes": "",
+      "added": "2026-03-21T16:33:42.513Z"
+    },
+    {
+      "word": "djuno",
+      "class": "gismu",
+      "definition": "$x_{1}$ knows fact(s) $x_{2}$ (du'u) about subject $x_{3}$ by epistemology $x_{4}$.",
+      "notes": "",
+      "added": "2026-03-21T16:33:58.993Z"
+    },
+    {
+      "word": "nupre",
+      "class": "gismu",
+      "definition": "$x_{1}$ (agent) promises/commits/assures/threatens $x_{2}$ (event/state) to $x_{3}$ [beneficiary/victim].",
+      "notes": "",
+      "added": "2026-03-21T16:34:23.424Z"
+    },
+    {
+      "word": "cusku",
+      "class": "gismu",
+      "definition": "$x_{1}$ (agent) expresses/says $x_{2}$ (sedu'u/text/lu'e concept) for audience $x_{3}$ via expressive medium $x_{4}$.",
+      "notes": "",
+      "added": "2026-03-21T16:34:44.952Z"
+    },
+    {
+      "word": "gleki",
+      "class": "gismu",
+      "definition": "$x_{1}$ is happy/merry/glad/gleeful about $x_{2}$ (event/state).",
+      "notes": "",
+      "added": "2026-03-21T16:35:07.312Z"
+    },
+    {
+      "word": "citka",
+      "class": "gismu",
+      "definition": "$x_{1}$ eats/ingests/consumes (transitive verb) $x_{2}$.",
+      "notes": "",
+      "added": "2026-03-21T16:35:22.808Z"
+    },
+    {
+      "word": "plise",
+      "class": "gismu",
+      "definition": "$x_{1}$ is an apple [fruit] of species/strain $x_{2}$.",
+      "notes": "",
+      "added": "2026-03-21T16:43:56.528Z"
+    },
+    {
+      "word": "vecnu",
+      "class": "gismu",
+      "definition": "$x_{1}$ [seller] sells/vends $x_{2}$ [goods/service/commodity] to buyer $x_{3}$ for amount/cost/expense $x_{4}$.",
+      "notes": "",
+      "added": "2026-03-21T16:44:25.887Z"
+    },
+    {
+      "word": "skami",
+      "class": "gismu",
+      "definition": "$x_{1}$ is a computer for purpose $x_{2}$.",
+      "notes": "",
+      "added": "2026-03-21T16:44:43.767Z"
+    },
+    {
+      "word": "pilno",
+      "class": "gismu",
+      "definition": "$x_1$ uses/employs $x_2$ [tool, apparatus, machine, agent, acting entity, material] for purpose $x_3$.",
+      "notes": "",
+      "added": "2026-03-21T16:45:08.263Z"
+    },
+    {
+      "word": "cmene",
+      "class": "gismu",
+      "definition": "$x_{1}$ (quoted word(s)) is a/the name/title/tag of $x_{2}$ to/used-by namer/name-user $x_{3}$ (person).",
+      "notes": "",
+      "added": "2026-03-21T16:45:37.239Z"
+    },
+    {
+      "word": "bangu",
+      "class": "gismu",
+      "definition": "$x_{1}$ is a/the language/dialect used by $x_{2}$ to express/communicate $x_{3}$ (si'o/du'u, not quote).",
+      "notes": "",
+      "added": "2026-03-21T16:45:58.687Z"
+    },
+    {
+      "word": "fanva",
+      "class": "gismu",
+      "definition": "$x_{1}$ translates text/utterance $x_{2}$ to language $x_{3}$ from language $x_{4}$ with translation result $x_{5}$.",
+      "notes": "",
+      "added": "2026-03-21T16:46:16.631Z"
+    },
+    {
+      "word": "mukti",
+      "class": "gismu",
+      "definition": "$x_{1}$ (action/event/state) motivates/is a motive/incentive for action/event $x_{2}$, per volition of $x_{3}$.",
+      "notes": "",
+      "added": "2026-03-21T16:46:40.343Z"
+    },
+    {
+      "word": "gasnu",
+      "class": "gismu",
+      "definition": "$x_{1}$ [person/agent] is an agentive cause of event $x_{2}$; $x_{1}$ does/brings about $x_{2}$.",
+      "notes": "",
+      "added": "2026-03-21T16:47:01.831Z"
+    },
+    {
+      "word": "lerci",
+      "class": "gismu",
+      "definition": "$x_{1}$ (event) is late by standard $x_{2}$.",
+      "notes": "",
+      "added": "2026-03-21T16:47:20.607Z"
+    },
+    {
+      "word": "kakne",
+      "class": "gismu",
+      "definition": "$x_{1}$ is able to do/be/capable of doing/being $x_{2}$ (event/state) under conditions $x_{3}$ (event/state).",
+      "notes": "",
+      "added": "2026-03-21T16:47:40.734Z"
     }
   ],
   "sentences": [
@@ -42,6 +280,60 @@
       "word": "tsani",
       "class": "gismu",
       "date": "2026-03-21T15:20:32.202Z"
+    },
+    {
+      "sentence": "le tsani cu melbi ca le cabdei",
+      "word": "tsani",
+      "class": "gismu",
+      "date": "2026-03-21T15:39:43.448Z"
+    },
+    {
+      "sentence": "le zdani be mi cu pelxu",
+      "word": "zdani",
+      "class": "gismu",
+      "date": "2026-03-21T15:40:08.183Z"
+    },
+    {
+      "sentence": "mi dunda le zdani be do do",
+      "word": "dunda",
+      "class": "gismu",
+      "date": "2026-03-21T15:40:40.184Z"
+    },
+    {
+      "sentence": "mi nelci le nu tavla do",
+      "word": "tavla",
+      "class": "gismu",
+      "date": "2026-03-21T15:41:19.343Z"
+    },
+    {
+      "sentence": "mi pu dunda le skami do",
+      "word": "dunda",
+      "class": "gismu",
+      "date": "2026-03-21T16:48:36.895Z"
+    },
+    {
+      "sentence": "le se dunda cu xamgu mi",
+      "word": "dunda",
+      "class": "gismu",
+      "date": "2026-03-21T16:49:17.854Z"
+    },
+    {
+      "sentence": "mi cu te dunda",
+      "word": "dunda",
+      "class": "gismu",
+      "date": "2026-03-21T16:49:55.463Z"
+    },
+    {
+      "sentence": "mi gasnu le nu do tadni la lojban",
+      "word": "gasnu",
+      "class": "gismu",
+      "date": "2026-03-21T16:51:01.638Z"
+    },
+    {
+      "sentence": "le melbi prenu cu gasnu le nu mi citka le grute",
+      "word": "gasnu",
+      "class": "gismu",
+      "date": "2026-03-21T16:52:44.878Z"
     }
   ]
 }
