@@ -257,12 +257,20 @@ function drawWord() {
   document.getElementById('save-feedback').style.display = 'none';
 }
 
+function normalize(str) {
+  return str.toLowerCase().replace(/\s+/g, ' ').trim();
+}
+
 function saveSentence() {
   const s = document.getElementById('inp-sentence').value.trim();
+  const fb = document.getElementById('save-feedback');
   if (!s || !currentWord) return;
+  if (data.sentences.find(x => normalize(x.sentence) === normalize(s))) {
+    showFeedback(fb, 'This sentence is already saved.', '#E24B4A');
+    return;
+  }
   data.sentences.push({ sentence: s, word: currentWord.word, class: currentWord.class, date: new Date().toISOString() });
   storageSave(); render();
-  const fb = document.getElementById('save-feedback');
   showFeedback(fb, 'Saved!', '#1D9E75');
 }
 
