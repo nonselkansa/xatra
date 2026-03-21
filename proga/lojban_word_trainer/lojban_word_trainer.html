@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Lojban Word Trainer</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #ffffff;
+    --bg-secondary: #f5f4f0;
+    --text: #1a1a1a;
+    --text-secondary: #6b6b68;
+    --text-tertiary: #a0a09c;
+    --border: rgba(0,0,0,0.12);
+    --border-hover: rgba(0,0,0,0.25);
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --font: system-ui, sans-serif;
+    --font-mono: 'Courier New', monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #1c1c1a;
+      --bg-secondary: #252522;
+      --text: #e8e7e2;
+      --text-secondary: #9a9994;
+      --text-tertiary: #5c5c58;
+      --border: rgba(255,255,255,0.12);
+      --border-hover: rgba(255,255,255,0.25);
+    }
+  }
+  body { font-family: var(--font); background: var(--bg); color: var(--text); padding: 2rem 1rem; min-height: 100vh; }
+  .app { max-width: 680px; margin: 0 auto; }
+  h1 { font-size: 20px; font-weight: 500; margin-bottom: 1.5rem; color: var(--text); }
+  .tabs { display: flex; gap: 4px; border-bottom: 0.5px solid var(--border); margin-bottom: 1.5rem; }
+  .tab { padding: 8px 16px; font-size: 14px; cursor: pointer; border: none; background: transparent; color: var(--text-secondary); border-bottom: 2px solid transparent; margin-bottom: -0.5px; font-family: var(--font); }
+  .tab.active { color: var(--text); border-bottom-color: var(--text); font-weight: 500; }
+  .panel { display: none; } .panel.active { display: block; }
+  .field { margin-bottom: 1rem; }
+  .field label { display: block; font-size: 13px; color: var(--text-secondary); margin-bottom: 6px; }
+  input[type=text], select, textarea {
+    width: 100%; padding: 8px 12px; font-size: 14px; font-family: var(--font);
+    background: var(--bg); color: var(--text);
+    border: 0.5px solid var(--border); border-radius: var(--radius-md);
+    outline: none; transition: border-color 0.15s;
+  }
+  input[type=text]:focus, select:focus { border-color: var(--border-hover); }
+  button {
+    padding: 8px 16px; font-size: 14px; font-family: var(--font); cursor: pointer;
+    background: transparent; color: var(--text);
+    border: 0.5px solid var(--border-hover); border-radius: var(--radius-md);
+    transition: background 0.15s;
+  }
+  button:hover { background: var(--bg-secondary); }
+  button:active { transform: scale(0.98); }
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .badge { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: var(--radius-md); font-weight: 500; }
+  .badge-gismu { background: #E6F1FB; color: #0C447C; }
+  .badge-cmavo { background: #EEEDFE; color: #3C3489; }
+  .badge-lujvo { background: #EAF3DE; color: #27500A; }
+  .badge-other { background: #f1efe8; color: #444441; }
+  .word-list { margin-top: 1.5rem; }
+  .word-item { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border: 0.5px solid var(--border); border-radius: var(--radius-md); margin-bottom: 6px; }
+  .word-item .word { font-weight: 500; font-size: 15px; flex: 0 0 auto; min-width: 80px; }
+  .word-item .def { font-size: 13px; color: var(--text-secondary); flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .word-item .del { background: none; border: none; cursor: pointer; color: var(--text-tertiary); font-size: 18px; padding: 0 4px; line-height: 1; }
+  .word-item .del:hover { color: #E24B4A; background: none; }
+  .empty { color: var(--text-tertiary); font-size: 14px; text-align: center; padding: 2rem; }
+  .practice-card { border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 1.5rem; background: var(--bg-secondary); margin-bottom: 1rem; min-height: 120px; }
+  .practice-word { font-size: 32px; font-weight: 500; margin-bottom: 8px; }
+  .practice-class { margin-bottom: 12px; }
+  .practice-def { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+  .sentence-item { padding: 10px 12px; border: 0.5px solid var(--border); border-radius: var(--radius-md); margin-bottom: 6px; }
+  .sentence-item .lojban { font-weight: 500; font-size: 14px; }
+  .sentence-item .meta { font-size: 12px; color: var(--text-tertiary); margin-top: 4px; }
+  .export-area { margin-top: 1rem; padding: 1rem; background: var(--bg-secondary); border-radius: var(--radius-md); font-size: 12px; font-family: var(--font-mono); white-space: pre-wrap; color: var(--text-secondary); max-height: 300px; overflow-y: auto; border: 0.5px solid var(--border); }
+  .count-pill { background: var(--bg-secondary); border: 0.5px solid var(--border); border-radius: 99px; font-size: 12px; padding: 2px 10px; color: var(--text-secondary); }
+  .section-title { font-size: 13px; font-weight: 500; color: var(--text-secondary); margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+  .filter-row { display: flex; gap: 6px; margin-bottom: 1rem; flex-wrap: wrap; }
+  .filter-btn { font-size: 12px; padding: 4px 12px; border-radius: 99px; }
+  .filter-btn.active { background: var(--bg-secondary); color: var(--text); border-color: var(--border-hover); font-weight: 500; }
+  .feedback { font-size: 13px; color: #1D9E75; margin-top: 8px; display: none; }
+  .btn-row { display: flex; gap: 8px; flex-wrap: wrap; }
+  .note { font-size: 12px; color: var(--text-tertiary); margin-top: 4px; }
+</style>
+</head>
+<body>
+<div class="app">
+  <h1>Lojban word trainer</h1>
+  <div class="tabs">
+    <button class="tab active" onclick="switchTab('add')">Add words</button>
+    <button class="tab" onclick="switchTab('practice')">Practice</button>
+    <button class="tab" onclick="switchTab('sentences')">Sentences</button>
+    <button class="tab" onclick="switchTab('export')">Export / Import</button>
+  </div>
+
+  <div id="tab-add" class="panel active">
+    <div class="row">
+      <div class="field">
+        <label>Word (valsi)</label>
+        <input type="text" id="inp-word" placeholder="e.g. klama" />
+      </div>
+      <div class="field">
+        <label>Class</label>
+        <select id="inp-class">
+          <option value="gismu">gismu</option>
+          <option value="cmavo">cmavo</option>
+          <option value="lujvo">lujvo</option>
+          <option value="other">other</option>
+        </select>
+      </div>
+    </div>
+    <div class="field">
+      <label>Definition</label>
+      <input type="text" id="inp-def" placeholder="e.g. x1 goes to x2 from x3 via x4 using x5" />
+    </div>
+    <div class="field">
+      <label>Notes (optional)</label>
+      <input type="text" id="inp-notes" placeholder="e.g. most common travel gismu" />
+    </div>
+    <button onclick="addWord()">Add word</button>
+    <div id="add-feedback" class="feedback"></div>
+
+    <div class="word-list">
+      <div class="section-title">
+        <span>Word bank</span>
+        <span class="count-pill" id="word-count">0 words</span>
+      </div>
+      <div class="filter-row">
+        <button class="filter-btn active" onclick="setFilter('all', this)">all</button>
+        <button class="filter-btn" onclick="setFilter('gismu', this)">gismu</button>
+        <button class="filter-btn" onclick="setFilter('cmavo', this)">cmavo</button>
+        <button class="filter-btn" onclick="setFilter('lujvo', this)">lujvo</button>
+        <button class="filter-btn" onclick="setFilter('other', this)">other</button>
+      </div>
+      <div id="word-list-container"></div>
+    </div>
+  </div>
+
+  <div id="tab-practice" class="panel">
+    <div class="section-title" style="margin-bottom:12px;">Pick from:</div>
+    <div class="filter-row" id="practice-filter-row">
+      <button class="filter-btn active" onclick="setPracticeFilter('gismu', this)">gismu only</button>
+      <button class="filter-btn" onclick="setPracticeFilter('all', this)">all classes</button>
+      <button class="filter-btn" onclick="setPracticeFilter('cmavo', this)">cmavo only</button>
+      <button class="filter-btn" onclick="setPracticeFilter('lujvo', this)">lujvo only</button>
+    </div>
+    <div class="practice-card" id="practice-card">
+      <div class="empty">Press "Draw word" to begin</div>
+    </div>
+    <button onclick="drawWord()">Draw word</button>
+    <div id="sentence-section" style="display:none; margin-top:1.5rem;">
+      <div class="field">
+        <label>Write a sentence using this word</label>
+        <input type="text" id="inp-sentence" placeholder="e.g. mi klama le zarci" />
+      </div>
+      <button onclick="saveSentence()">Save sentence</button>
+      <div id="save-feedback" class="feedback">Saved!</div>
+    </div>
+  </div>
+
+  <div id="tab-sentences" class="panel">
+    <div class="section-title">
+      <span>Saved sentences</span>
+      <span class="count-pill" id="sentence-count">0</span>
+    </div>
+    <div id="sentence-list-container"><div class="empty">No sentences yet.</div></div>
+  </div>
+
+  <div id="tab-export" class="panel">
+    <div class="section-title" style="margin-bottom:8px;">Export</div>
+    <div class="btn-row" style="margin-bottom:1.5rem;">
+      <button onclick="copyExport()">Copy JSON</button>
+      <button onclick="downloadExport()">Download .json</button>
+    </div>
+    <div class="section-title" style="margin-bottom:8px;">Import</div>
+    <div class="field">
+      <label>Paste JSON to import (merges with existing data)</label>
+      <textarea id="imp-area" rows="5" style="font-family:var(--font-mono); font-size:12px; resize:vertical;" placeholder='{"words":[...],"sentences":[]}'></textarea>
+    </div>
+    <button onclick="importData()">Import</button>
+    <div id="import-feedback" class="feedback"></div>
+    <div class="section-title" style="margin-top:1.5rem; margin-bottom:8px;">Current data</div>
+    <div class="export-area" id="export-area">{}</div>
+  </div>
+</div>
+
+<script>
+const STORAGE_KEY = 'lojban_trainer_v1';
+let data = { words: [], sentences: [] };
+let currentFilter = 'all';
+let practiceFilter = 'gismu';
+let currentWord = null;
+
+function storageLoad() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (raw) data = JSON.parse(raw);
+  } catch(e) {}
+}
+
+function storageSave() {
+  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(data)); } catch(e) {}
+}
+
+function addWord() {
+  const word = document.getElementById('inp-word').value.trim().toLowerCase();
+  const cls = document.getElementById('inp-class').value;
+  const def = document.getElementById('inp-def').value.trim();
+  const notes = document.getElementById('inp-notes').value.trim();
+  const fb = document.getElementById('add-feedback');
+  if (!word || !def) { showFeedback(fb, 'Please fill in the word and definition.', '#E24B4A'); return; }
+  if (data.words.find(w => w.word === word)) { showFeedback(fb, '"' + word + '" is already in the list.', '#E24B4A'); return; }
+  data.words.push({ word, class: cls, definition: def, notes, added: new Date().toISOString() });
+  document.getElementById('inp-word').value = '';
+  document.getElementById('inp-def').value = '';
+  document.getElementById('inp-notes').value = '';
+  storageSave(); render();
+  showFeedback(fb, '"' + word + '" added!', '#1D9E75');
+}
+
+function removeWord(word) {
+  if (!confirm('Remove "' + word + '"?')) return;
+  data.words = data.words.filter(w => w.word !== word);
+  storageSave(); render();
+}
+
+function setFilter(f, btn) {
+  currentFilter = f;
+  document.querySelectorAll('#tab-add .filter-row .filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderWordList();
+}
+
+function setPracticeFilter(f, btn) {
+  practiceFilter = f;
+  document.querySelectorAll('#practice-filter-row .filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+}
+
+function drawWord() {
+  const pool = practiceFilter === 'all' ? data.words : data.words.filter(w => w.class === practiceFilter);
+  if (!pool.length) {
+    document.getElementById('practice-card').innerHTML = '<div class="empty">No words in this class yet. Add some first.</div>';
+    document.getElementById('sentence-section').style.display = 'none';
+    return;
+  }
+  currentWord = pool[Math.floor(Math.random() * pool.length)];
+  document.getElementById('practice-card').innerHTML =
+    '<div class="practice-word">' + esc(currentWord.word) + '</div>' +
+    '<div class="practice-class"><span class="badge badge-' + currentWord.class + '">' + currentWord.class + '</span></div>' +
+    '<div class="practice-def">' + esc(currentWord.definition) + '</div>' +
+    (currentWord.notes ? '<div style="margin-top:8px;font-size:12px;color:var(--text-tertiary);">' + esc(currentWord.notes) + '</div>' : '');
+  document.getElementById('sentence-section').style.display = 'block';
+  document.getElementById('inp-sentence').value = '';
+  document.getElementById('save-feedback').style.display = 'none';
+}
+
+function saveSentence() {
+  const s = document.getElementById('inp-sentence').value.trim();
+  if (!s || !currentWord) return;
+  data.sentences.push({ sentence: s, word: currentWord.word, class: currentWord.class, date: new Date().toISOString() });
+  storageSave(); render();
+  const fb = document.getElementById('save-feedback');
+  showFeedback(fb, 'Saved!', '#1D9E75');
+}
+
+function copyExport() {
+  navigator.clipboard.writeText(JSON.stringify(data, null, 2));
+}
+
+function downloadExport() {
+  const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+  const a = document.createElement('a'); a.href = URL.createObjectURL(blob);
+  a.download = 'lojban_words.json'; a.click();
+}
+
+function importData() {
+  const raw = document.getElementById('imp-area').value.trim();
+  const fb = document.getElementById('import-feedback');
+  try {
+    const imported = JSON.parse(raw);
+    const words = imported.words || [];
+    const sentences = imported.sentences || [];
+    let added = 0;
+    words.forEach(w => {
+      if (!data.words.find(x => x.word === w.word)) { data.words.push(w); added++; }
+    });
+    sentences.forEach(s => { data.sentences.push(s); });
+    storageSave(); render();
+    document.getElementById('imp-area').value = '';
+    showFeedback(fb, 'Imported ' + added + ' new words and ' + sentences.length + ' sentences.', '#1D9E75');
+  } catch(e) {
+    showFeedback(fb, 'Invalid JSON. Please check the format.', '#E24B4A');
+  }
+}
+
+function switchTab(name) {
+  const names = ['add','practice','sentences','export'];
+  document.querySelectorAll('.tab').forEach((t,i) => t.classList.toggle('active', names[i] === name));
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.getElementById('tab-' + name).classList.add('active');
+  if (name === 'export') renderExport();
+}
+
+function renderWordList() {
+  const filtered = currentFilter === 'all' ? data.words : data.words.filter(w => w.class === currentFilter);
+  const c = document.getElementById('word-list-container');
+  if (!filtered.length) { c.innerHTML = '<div class="empty">No words yet.</div>'; return; }
+  c.innerHTML = filtered.map(w =>
+    '<div class="word-item"><span class="word">' + esc(w.word) + '</span><span class="badge badge-' + w.class + '">' + w.class + '</span><span class="def">' + esc(w.definition) + '</span><button class="del" onclick="removeWord(\'' + esc(w.word) + '\')">×</button></div>'
+  ).join('');
+}
+
+function renderSentences() {
+  const c = document.getElementById('sentence-list-container');
+  document.getElementById('sentence-count').textContent = data.sentences.length;
+  if (!data.sentences.length) { c.innerHTML = '<div class="empty">No sentences yet. Practice to add some.</div>'; return; }
+  c.innerHTML = [...data.sentences].reverse().map(s =>
+    '<div class="sentence-item"><div class="lojban">' + esc(s.sentence) + '</div><div class="meta">word used: <strong>' + esc(s.word) + '</strong> &middot; ' + new Date(s.date).toLocaleDateString() + '</div></div>'
+  ).join('');
+}
+
+function renderExport() {
+  document.getElementById('export-area').textContent = JSON.stringify(data, null, 2);
+}
+
+function render() {
+  document.getElementById('word-count').textContent = data.words.length + ' word' + (data.words.length !== 1 ? 's' : '');
+  renderWordList();
+  renderSentences();
+}
+
+function showFeedback(el, msg, color) {
+  el.textContent = msg;
+  el.style.color = color;
+  el.style.display = 'block';
+  setTimeout(() => { el.style.display = 'none'; }, 3000);
+}
+
+function esc(str) {
+  return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+storageLoad();
+render();
+</script>
+</body>
+</html>
