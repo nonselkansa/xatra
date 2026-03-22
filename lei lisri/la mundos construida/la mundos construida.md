@@ -1,6 +1,6 @@
 # La mundos construida
 
-Novela resomada en un frase: Los entra en un gera par causa de un revoltor multe intelijente, ma en la fini los vide ce geras es mal e los reveni a la state de la comensa, en pas.
+Novela resomada en un frase: Los entra en un gera par causa de un revoltor multe intelijente, ma en la fini, los vide ce geras es mal e los reveni a la state de la comensa, totas vivente en pas.
 
 ## Grasias
 
@@ -38,7 +38,7 @@ Me ia pensa: E si on ta ave un novela cual ta usa la linguas construida la plu f
 
 ## Capitol 5 - (Gera)
 
-## Capitol 6 - (Restart)
+## Capitol 6 - (Recomensa)
 
 ## Bibliografia
 
