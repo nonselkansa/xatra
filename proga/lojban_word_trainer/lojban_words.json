@@ -272,6 +272,671 @@
       "definition": "$x_{1}$ is able to do/be/capable of doing/being $x_{2}$ (event/state) under conditions $x_{3}$ (event/state).",
       "notes": "",
       "added": "2026-03-21T16:47:40.734Z"
+    },
+    {
+      "word": "ti",
+      "class": "cmavo",
+      "definition": "pro-sumti: this here; immediate demonstrative it; indicated thing/place near speaker.",
+      "notes": "",
+      "added": "2026-03-21T17:30:40.297Z"
+    },
+    {
+      "word": "ta",
+      "class": "cmavo",
+      "definition": "pro-sumti: that there; nearby demonstrative it; indicated thing/place near listener.",
+      "notes": "",
+      "added": "2026-03-21T17:30:58.569Z"
+    },
+    {
+      "word": "zo'e",
+      "class": "cmavo",
+      "definition": "pro-sumti: an elliptical/unspecified value; has some value which makes bridi true.",
+      "notes": "",
+      "added": "2026-03-21T17:31:15.505Z"
+    },
+    {
+      "word": "lo",
+      "class": "cmavo",
+      "definition": "descriptor: the one, which (is / does) ... / those, which (are / do) ...",
+      "notes": "",
+      "added": "2026-03-21T17:31:44.105Z"
+    },
+    {
+      "word": "ku",
+      "class": "cmavo",
+      "definition": "elidable terminator: end description, modal, or negator sumti; often elidable.",
+      "notes": "",
+      "added": "2026-03-21T17:32:04.385Z"
+    },
+    {
+      "word": "fa",
+      "class": "cmavo",
+      "definition": "sumti place tag: tag 1st sumti place.",
+      "notes": "",
+      "added": "2026-03-21T17:32:16.297Z"
+    },
+    {
+      "word": "fe",
+      "class": "cmavo",
+      "definition": "sumti place tag: tag 2nd sumti place.",
+      "notes": "",
+      "added": "2026-03-21T17:32:29.449Z"
+    },
+    {
+      "word": "fi",
+      "class": "cmavo",
+      "definition": "sumti place tag: tag 3rd sumti place.",
+      "notes": "",
+      "added": "2026-03-21T17:32:42.225Z"
+    },
+    {
+      "word": "fo",
+      "class": "cmavo",
+      "definition": "sumti place tag: tag 4th sumti place.",
+      "notes": "",
+      "added": "2026-03-21T17:32:52.865Z"
+    },
+    {
+      "word": "fu",
+      "class": "cmavo",
+      "definition": "sumti place tag: tag 5th sumti place.",
+      "notes": "",
+      "added": "2026-03-21T17:33:08.657Z"
+    },
+    {
+      "word": "se",
+      "class": "cmavo",
+      "definition": "2nd conversion; switch 1st/2nd places.",
+      "notes": "",
+      "added": "2026-03-21T17:35:43.744Z"
+    },
+    {
+      "word": "te",
+      "class": "cmavo",
+      "definition": "3rd conversion; switch 1st/3rd places.",
+      "notes": "",
+      "added": "2026-03-21T17:35:58.184Z"
+    },
+    {
+      "word": "ve",
+      "class": "cmavo",
+      "definition": "4th conversion; switch 1st/4th places.",
+      "notes": "",
+      "added": "2026-03-21T17:36:13.080Z"
+    },
+    {
+      "word": "xe",
+      "class": "cmavo",
+      "definition": "5th conversion; switch 1st/5th places.",
+      "notes": "",
+      "added": "2026-03-21T17:36:27.833Z"
+    },
+    {
+      "word": "xu",
+      "class": "cmavo",
+      "definition": "discursive: true-false question.",
+      "notes": "",
+      "added": "2026-03-21T17:36:42.840Z"
+    },
+    {
+      "word": "ma",
+      "class": "cmavo",
+      "definition": "pro-sumti: sumti question (what/who/how/why/etc.); appropriately fill in sumti blank.",
+      "notes": "",
+      "added": "2026-03-21T17:37:00.425Z"
+    },
+    {
+      "word": "mo",
+      "class": "cmavo",
+      "definition": "pro-bridi: bridi/selbri/brivla question.",
+      "notes": "",
+      "added": "2026-03-21T17:37:22.808Z"
+    },
+    {
+      "word": "na",
+      "class": "cmavo",
+      "definition": "bridi contradictory negator; scope is an entire bridi; logically negates in some cmavo compounds.",
+      "notes": "",
+      "added": "2026-03-21T17:38:04.112Z"
+    },
+    {
+      "word": "tolspofu",
+      "class": "lujvo",
+      "definition": "$x_1$ is capable of performing functions/ready for use or service $x_2$; $x_1$ is operable, functional, operational, usable, unbroken, useable, utile",
+      "notes": "",
+      "added": "2026-03-21T17:45:59.303Z"
+    },
+    {
+      "word": "go'i",
+      "class": "cmavo",
+      "definition": "pro-bridi: preceding bridi; in answer to a yes/no question, repeats the claim, meaning yes.",
+      "notes": "",
+      "added": "2026-03-21T17:46:32.111Z"
+    },
+    {
+      "word": "su'u",
+      "class": "cmavo",
+      "definition": "abstractor: generalized abstractor (how); $x_{1}$ is [bridi] as a non-specific abstraction of type $x_{2}$.",
+      "notes": "",
+      "added": "2026-03-21T17:46:52.455Z"
+    },
+    {
+      "word": "nu",
+      "class": "cmavo",
+      "definition": "abstractor: generalized event abstractor; $x_{1}$ is state/process/achievement/activity of [bridi].",
+      "notes": "",
+      "added": "2026-03-21T17:53:05.567Z"
+    },
+    {
+      "word": "du'u",
+      "class": "cmavo",
+      "definition": "abstractor: predication/bridi abstractor; $x_{1}$ is predication [bridi] expressed in sentence $x_{2}$.",
+      "notes": "",
+      "added": "2026-03-21T18:11:30.164Z"
+    },
+    {
+      "word": "sedu'u",
+      "class": "cmavo",
+      "definition": "compound abstractor: sentence/equation abstract; $x_{1}$ is text expressing [bridi] which is $x_{2}$.",
+      "notes": "",
+      "added": "2026-03-21T18:11:45.652Z"
+    },
+    {
+      "word": "kei",
+      "class": "cmavo",
+      "definition": "elidable terminator: end abstraction bridi (often elidable).",
+      "notes": "",
+      "added": "2026-03-21T18:11:58.716Z"
+    },
+    {
+      "word": "vau",
+      "class": "cmavo",
+      "definition": "elidable: end of sumti in simple bridi; in compound bridi, separates common trailing sumti.",
+      "notes": "",
+      "added": "2026-03-21T18:12:11.700Z"
+    },
+    {
+      "word": "poi",
+      "class": "cmavo",
+      "definition": "restrictive relative clause; attaches subordinate bridi with identifying information to a sumti.",
+      "notes": "",
+      "added": "2026-03-21T18:12:26.324Z"
+    },
+    {
+      "word": "noi",
+      "class": "cmavo",
+      "definition": "non-restrictive relative clause; attaches subordinate bridi with incidental information.",
+      "notes": "",
+      "added": "2026-03-21T18:12:39.604Z"
+    },
+    {
+      "word": "ke'a",
+      "class": "cmavo",
+      "definition": "pro-sumti: relativized sumti (object of relative clause).",
+      "notes": "",
+      "added": "2026-03-21T18:12:56.924Z"
+    },
+    {
+      "word": "ku'o",
+      "class": "cmavo",
+      "definition": "elidable terminator: end NOI relative clause; always elidable, but preferred in complex clauses.",
+      "notes": "",
+      "added": "2026-03-21T18:13:13.068Z"
+    },
+    {
+      "word": "be",
+      "class": "cmavo",
+      "definition": "sumti link to attach sumti (default $x_{2}$) to a selbri; used in descriptions.",
+      "notes": "",
+      "added": "2026-03-21T18:13:27.132Z"
+    },
+    {
+      "word": "bei",
+      "class": "cmavo",
+      "definition": "separates multiple linked sumti within a selbri; used in descriptions.",
+      "notes": "",
+      "added": "2026-03-21T18:13:58.188Z"
+    },
+    {
+      "word": "be'o",
+      "class": "cmavo",
+      "definition": "elidable terminator: end linked sumti in specified description.",
+      "notes": "",
+      "added": "2026-03-21T18:14:19.091Z"
+    },
+    {
+      "word": "pi'o",
+      "class": "cmavo",
+      "definition": "pilno modal, 1st place used by ...",
+      "notes": "",
+      "added": "2026-03-21T18:14:52.323Z"
+    },
+    {
+      "word": "mu'i",
+      "class": "cmavo",
+      "definition": "mukti modal, 1st place because of motive ...",
+      "notes": "",
+      "added": "2026-03-21T18:15:16.435Z"
+    },
+    {
+      "word": "gau",
+      "class": "cmavo",
+      "definition": "gasnu modal, 1st place agent/actor case tag with active agent ...",
+      "notes": "",
+      "added": "2026-03-21T18:15:35.915Z"
+    },
+    {
+      "word": "pu",
+      "class": "cmavo",
+      "definition": "time tense relation/direction: did [selbri]; before/prior to [sumti]; default past tense.",
+      "notes": "",
+      "added": "2026-03-21T18:15:57.188Z"
+    },
+    {
+      "word": "ba",
+      "class": "cmavo",
+      "definition": "time tense relation/direction: will [selbri]; after [sumti]; default future tense.",
+      "notes": "",
+      "added": "2026-03-21T18:16:11.163Z"
+    },
+    {
+      "word": "zo",
+      "class": "cmavo",
+      "definition": "quote next word only; quotes a single Lojban word (not a cmavo compound or tanru).",
+      "notes": "",
+      "added": "2026-03-21T18:16:26.411Z"
+    },
+    {
+      "word": "lu",
+      "class": "cmavo",
+      "definition": "start grammatical quotation; quoted text should be grammatical on its own.",
+      "notes": "",
+      "added": "2026-03-22T10:02:21.791Z"
+    },
+    {
+      "word": "li'u",
+      "class": "cmavo",
+      "definition": "elidable terminator: end grammatical quotation; seldom elidable except at end of text.",
+      "notes": "",
+      "added": "2026-03-22T10:02:38.231Z"
+    },
+    {
+      "word": "ne",
+      "class": "cmavo",
+      "definition": "non-restrictive relative phrase marker: which incidentally is associated with ...",
+      "notes": "",
+      "added": "2026-03-22T10:02:50.895Z"
+    },
+    {
+      "word": "pe",
+      "class": "cmavo",
+      "definition": "restrictive relative phrase marker: which is associated with ...; loosest associative/possessive.",
+      "notes": "",
+      "added": "2026-03-22T10:03:04.016Z"
+    },
+    {
+      "word": "po",
+      "class": "cmavo",
+      "definition": "restrictive relative phrase marker: which is specific to ...; normal possessive physical/legal.",
+      "notes": "",
+      "added": "2026-03-22T10:03:24.735Z"
+    },
+    {
+      "word": "po'e",
+      "class": "cmavo",
+      "definition": "restrictive relative phrase marker: which belongs to ... ; inalienable possession.",
+      "notes": "",
+      "added": "2026-03-22T10:03:37.592Z"
+    },
+    {
+      "word": ".a",
+      "class": "cmavo",
+      "definition": "logical connective: sumti afterthought or.",
+      "notes": "",
+      "added": "2026-03-22T10:03:54.791Z"
+    },
+    {
+      "word": ".e",
+      "class": "cmavo",
+      "definition": "logical connective: sumti afterthought and.",
+      "notes": "",
+      "added": "2026-03-22T10:04:17.423Z"
+    },
+    {
+      "word": ".o",
+      "class": "cmavo",
+      "definition": "logical connective: sumti afterthought biconditional/iff/if-and-only-if.",
+      "notes": "",
+      "added": "2026-03-22T10:13:36.335Z"
+    },
+    {
+      "word": ".u",
+      "class": "cmavo",
+      "definition": "logical connective: sumti afterthought whether-or-not.",
+      "notes": "",
+      "added": "2026-03-22T10:13:54.432Z"
+    },
+    {
+      "word": "na'e",
+      "class": "cmavo",
+      "definition": "contrary scalar negator: other than ...; not ...; a scale or set is implied.",
+      "notes": "",
+      "added": "2026-03-22T10:14:09.087Z"
+    },
+    {
+      "word": "to'e",
+      "class": "cmavo",
+      "definition": "polar opposite scalar negator.",
+      "notes": "",
+      "added": "2026-03-22T10:14:21.447Z"
+    },
+    {
+      "word": "no'e",
+      "class": "cmavo",
+      "definition": "midpoint scalar negator: neutral point between je'a and to'e; \"not really\".",
+      "notes": "",
+      "added": "2026-03-22T10:14:41.456Z"
+    },
+    {
+      "word": "tu'a",
+      "class": "cmavo",
+      "definition": "extracts a concrete sumti from an unspecified abstraction; equivalent to le nu/su'u [sumti] co'e.",
+      "notes": "",
+      "added": "2026-03-22T10:14:57.303Z"
+    },
+    {
+      "word": "jai",
+      "class": "cmavo",
+      "definition": "convert tense/modal (tagged) place to 1st place; 1st place moves to extra FA place (fai).",
+      "notes": "",
+      "added": "2026-03-22T10:15:11.239Z"
+    },
+    {
+      "word": "la",
+      "class": "cmavo",
+      "definition": "name descriptor: the one(s) called ... ; takes name or selbri description.",
+      "notes": "",
+      "added": "2026-03-22T10:15:26.983Z"
+    },
+    {
+      "word": "no",
+      "class": "cmavo",
+      "definition": "digit/number: 0 (digit) [zero].",
+      "notes": "",
+      "added": "2026-03-22T10:15:57.167Z"
+    },
+    {
+      "word": "pa",
+      "class": "cmavo",
+      "definition": "digit/number: 1 (digit) [one].",
+      "notes": "",
+      "added": "2026-03-22T10:16:11.687Z"
+    },
+    {
+      "word": "re",
+      "class": "cmavo",
+      "definition": "digit/number: 2 (digit) [two].",
+      "notes": "",
+      "added": "2026-03-22T10:16:20.846Z"
+    },
+    {
+      "word": "ci",
+      "class": "cmavo",
+      "definition": "digit/number: 3 (digit) [three].",
+      "notes": "",
+      "added": "2026-03-22T10:16:37.631Z"
+    },
+    {
+      "word": "vo",
+      "class": "cmavo",
+      "definition": "digit/number: 4 (digit) [four].",
+      "notes": "",
+      "added": "2026-03-22T10:16:51.175Z"
+    },
+    {
+      "word": "mu",
+      "class": "cmavo",
+      "definition": "digit/number: 5 (digit) [five].",
+      "notes": "",
+      "added": "2026-03-22T10:17:07.630Z"
+    },
+    {
+      "word": "xa",
+      "class": "cmavo",
+      "definition": "digit/number: 6 (digit) [six].",
+      "notes": "",
+      "added": "2026-03-22T10:17:21.727Z"
+    },
+    {
+      "word": "ze",
+      "class": "cmavo",
+      "definition": "digit/number: 7 (digit) [seven].",
+      "notes": "",
+      "added": "2026-03-22T10:17:30.871Z"
+    },
+    {
+      "word": "bi",
+      "class": "cmavo",
+      "definition": "digit/number: 8 (digit) [eight].",
+      "notes": "",
+      "added": "2026-03-22T10:17:51.103Z"
+    },
+    {
+      "word": "so",
+      "class": "cmavo",
+      "definition": "digit/number: 9 (digit) [nine].",
+      "notes": "",
+      "added": "2026-03-22T10:18:03.871Z"
+    },
+    {
+      "word": "pi",
+      "class": "cmavo",
+      "definition": "digit/number: radix (number base) point; default decimal.",
+      "notes": "",
+      "added": "2026-03-22T10:18:21.127Z"
+    },
+    {
+      "word": "ro",
+      "class": "cmavo",
+      "definition": "digit/number: each, all.",
+      "notes": "",
+      "added": "2026-03-22T10:18:41.191Z"
+    },
+    {
+      "word": "so'a",
+      "class": "cmavo",
+      "definition": "digit/number: almost all (digit/number).",
+      "notes": "",
+      "added": "2026-03-22T10:18:58.583Z"
+    },
+    {
+      "word": "so'e",
+      "class": "cmavo",
+      "definition": "digit/number: most.",
+      "notes": "",
+      "added": "2026-03-22T10:19:14.159Z"
+    },
+    {
+      "word": "so'i",
+      "class": "cmavo",
+      "definition": "digit/number: many.",
+      "notes": "",
+      "added": "2026-03-22T10:19:28.391Z"
+    },
+    {
+      "word": "so'o",
+      "class": "cmavo",
+      "definition": "digit/number: several.",
+      "notes": "",
+      "added": "2026-03-22T10:19:47.479Z"
+    },
+    {
+      "word": "so'u",
+      "class": "cmavo",
+      "definition": "digit/number: few.",
+      "notes": "",
+      "added": "2026-03-22T10:20:04.375Z"
+    },
+    {
+      "word": "pu'o",
+      "class": "cmavo",
+      "definition": "interval event contour: in anticipation of ...;  until ... ; inchoative ----|     |.",
+      "notes": "",
+      "added": "2026-03-22T10:20:27.295Z"
+    },
+    {
+      "word": "ca'o",
+      "class": "cmavo",
+      "definition": "interval event contour: during ...; continuative |-----|.",
+      "notes": "",
+      "added": "2026-03-22T10:20:49.279Z"
+    },
+    {
+      "word": "ba'o",
+      "class": "cmavo",
+      "definition": "interval event contour: in the aftermath of ...; since ...; retrospective/perfect |     |----.",
+      "notes": "",
+      "added": "2026-03-22T10:21:10.535Z"
+    },
+    {
+      "word": "co'a",
+      "class": "cmavo",
+      "definition": "interval event contour: at the starting point of ...; initiative >|<    |.",
+      "notes": "",
+      "added": "2026-03-22T10:21:27.575Z"
+    },
+    {
+      "word": "co'u",
+      "class": "cmavo",
+      "definition": "interval event contour: at the ending point of ... even if not done; cessative |  >< |.",
+      "notes": "",
+      "added": "2026-03-22T10:21:48.527Z"
+    },
+    {
+      "word": "loi",
+      "class": "cmavo",
+      "definition": "veridical descriptor: the mass of individual(s) that is(are) ...",
+      "notes": "",
+      "added": "2026-03-22T10:22:03.495Z"
+    },
+    {
+      "word": "lei",
+      "class": "cmavo",
+      "definition": "non-veridical descriptor: the mass of individual(s) described as ...",
+      "notes": "",
+      "added": "2026-03-22T10:22:16.639Z"
+    },
+    {
+      "word": "lai",
+      "class": "cmavo",
+      "definition": "name descriptor: the mass of individual(s) named ... ; takes name or selbri description.",
+      "notes": "",
+      "added": "2026-03-22T10:22:33.558Z"
+    },
+    {
+      "word": "lo'e",
+      "class": "cmavo",
+      "definition": "veridical descriptor: the typical one(s) who really is(are) ...",
+      "notes": "",
+      "added": "2026-03-22T10:22:54.735Z"
+    },
+    {
+      "word": "le'e",
+      "class": "cmavo",
+      "definition": "non-veridical descriptor: the stereotype of those described as ...",
+      "notes": "",
+      "added": "2026-03-22T10:23:10.055Z"
+    },
+    {
+      "word": "zu'a",
+      "class": "cmavo",
+      "definition": "location tense relation/direction; leftwards/to the left of ...",
+      "notes": "",
+      "added": "2026-03-22T10:23:31.375Z"
+    },
+    {
+      "word": "ri'u",
+      "class": "cmavo",
+      "definition": "location tense relation/direction; rightwards/to the right of ...",
+      "notes": "",
+      "added": "2026-03-22T10:23:45.767Z"
+    },
+    {
+      "word": "vi",
+      "class": "cmavo",
+      "definition": "location tense distance: here at ... ; at or a very short/tiny distance from ...",
+      "notes": "",
+      "added": "2026-03-22T10:24:02.871Z"
+    },
+    {
+      "word": "va",
+      "class": "cmavo",
+      "definition": "location tense distance: near to ... ; there at ...; a medium/small distance from ...",
+      "notes": "",
+      "added": "2026-03-22T10:24:15.935Z"
+    },
+    {
+      "word": "vu",
+      "class": "cmavo",
+      "definition": "location tense distance: far from ... ; yonder at ... ; a long distance from ...",
+      "notes": "",
+      "added": "2026-03-22T10:24:26.079Z"
+    },
+    {
+      "word": "zi",
+      "class": "cmavo",
+      "definition": "time tense distance: instantaneous-to-short distance in time.",
+      "notes": "",
+      "added": "2026-03-22T10:24:39.815Z"
+    },
+    {
+      "word": "za",
+      "class": "cmavo",
+      "definition": "time tense distance: medium distance in time.",
+      "notes": "",
+      "added": "2026-03-22T10:24:50.079Z"
+    },
+    {
+      "word": "zu",
+      "class": "cmavo",
+      "definition": "time tense distance: long distance in time.",
+      "notes": "",
+      "added": "2026-03-22T10:25:01.471Z"
+    },
+    {
+      "word": "grake",
+      "class": "gismu",
+      "definition": "$x_{1}$ is $x_{2}$ gram(s) [metric unit] in mass (default is 1) by standard $x_{3}$.",
+      "notes": "",
+      "added": "2026-03-22T10:26:46.510Z"
+    },
+    {
+      "word": "ponse",
+      "class": "gismu",
+      "definition": "$x_{1}$ possesses/owns/has $x_{2}$ under law/custom $x_{3}$; $x_{1}$ is owner/proprietor of $x_{2}$ under $x_{3}$.",
+      "notes": "",
+      "added": "2026-03-22T10:27:20.295Z"
+    },
+    {
+      "word": "taske",
+      "class": "gismu",
+      "definition": "$x_{1}$ thirsts for $x_{2}$; $x_{1}$ needs/wants drink/fluid/lubrication $x_{2}$.",
+      "notes": "",
+      "added": "2026-03-22T10:46:46.510Z"
+    },
+    {
+      "word": "zbepi",
+      "class": "gismu",
+      "definition": "$x_{1}$ is a pedestal/base/stand/pallet supporting $x_{2}$ (object/event), of materials/properties $x_{3}$.",
+      "notes": "",
+      "added": "2026-03-22T10:55:17.406Z"
+    },
+    {
+      "word": "speme'i",
+      "class": "lujvo",
+      "definition": "$x_1$ is a sister-in-law (sister of a spouse) of $x_2$ according to custom/law $x_3$.",
+      "notes": "",
+      "added": "2026-03-22T10:57:20.126Z"
     }
   ],
   "sentences": [
@@ -334,6 +999,84 @@
       "word": "gasnu",
       "class": "gismu",
       "date": "2026-03-21T16:52:44.878Z"
+    },
+    {
+      "sentence": "mi gleki",
+      "word": "mi",
+      "class": "cmavo",
+      "date": "2026-03-21T17:38:16.521Z"
+    },
+    {
+      "sentence": "mi prami le panzi pe mi",
+      "word": "prami",
+      "class": "gismu",
+      "date": "2026-03-21T17:41:41.048Z"
+    },
+    {
+      "sentence": "le skami cu tolspofu",
+      "word": "skami",
+      "class": "gismu",
+      "date": "2026-03-21T17:45:32.607Z"
+    },
+    {
+      "sentence": "mi pu ciska zo'e ti",
+      "word": "ciska",
+      "class": "gismu",
+      "date": "2026-03-21T18:09:50.357Z"
+    },
+    {
+      "sentence": "do ciska zo'e ma",
+      "word": "ma",
+      "class": "cmavo",
+      "date": "2026-03-21T18:10:05.469Z"
+    },
+    {
+      "sentence": "ma cmene be do",
+      "word": "cmene",
+      "class": "gismu",
+      "date": "2026-03-21T18:11:07.820Z"
+    },
+    {
+      "sentence": "mi djuno le du'u mi tadni la lojban",
+      "word": "djuno",
+      "class": "gismu",
+      "date": "2026-03-22T10:38:20.104Z"
+    },
+    {
+      "sentence": "le mo'a prenu cu djuno le du'u da zo'u da lojbo prenu",
+      "word": "djuno",
+      "class": "gismu",
+      "date": "2026-03-22T10:42:21.502Z"
+    },
+    {
+      "sentence": "le re prenu cu grake li pa vo no no no no",
+      "word": "grake",
+      "class": "gismu",
+      "date": "2026-03-22T10:44:03.686Z"
+    },
+    {
+      "sentence": "le plise cu grake li pa no no",
+      "word": "grake",
+      "class": "gismu",
+      "date": "2026-03-22T10:44:28.702Z"
+    },
+    {
+      "sentence": "ti melbi prenu",
+      "word": "prenu",
+      "class": "gismu",
+      "date": "2026-03-22T10:45:50.806Z"
+    },
+    {
+      "sentence": "xu do dunda le djacu le taske prenu",
+      "word": "dunda",
+      "class": "gismu",
+      "date": "2026-03-22T10:46:34.966Z"
+    },
+    {
+      "sentence": "la .alinas. noi speme'i be mi cu vecnu le pa fonxa zbepi poi cmalu ku'o mi",
+      "word": "vecnu",
+      "class": "gismu",
+      "date": "2026-03-22T10:57:47.142Z"
     }
   ]
 }
