@@ -243,8 +243,9 @@ function removeWord(word) {
   storageSave(); render();
 }
 
-function toggleWordEdit(word) {
-  const el = document.getElementById('we-' + word);
+function toggleWordEdit(word, prefix) {
+  prefix = prefix || 'we';
+  const el = document.getElementById(prefix + '-' + word);
   if (!el) return;
   const isOpen = el.classList.contains('open');
   document.querySelectorAll('.item-edit').forEach(e => e.classList.remove('open'));
@@ -263,7 +264,7 @@ function toggleWordEdit(word) {
       '<div style="margin-bottom:8px;"><label class="edit-label">Notes</label><input type="text" id="ew-notes-' + esc(word) + '" value="' + esc(w.notes||'') + '" /></div>' +
       '<div class="edit-actions">' +
         '<button class="btn-sm" onclick="saveWordEdit(\'' + esc(word) + '\')">Save</button>' +
-        '<button class="btn-sm" onclick="toggleWordEdit(\'' + esc(word) + '\')">Cancel</button>' +
+        '<button class="btn-sm" onclick="toggleWordEdit(\'' + esc(word) + '\',\'' + prefix + '\')">Cancel</button>' +
       '</div>';
     el.classList.add('open');
   }
@@ -390,7 +391,8 @@ function switchTab(name) {
   if (name === 'words') renderWordsTab();
 }
 
-function wordItemHTML(w, editable) {
+function wordItemHTML(w, editable, prefix) {
+  prefix = prefix || 'we';
   return '<div class="item-card">' +
     '<div class="item-view">' +
       '<div class="item-body">' +
@@ -399,11 +401,11 @@ function wordItemHTML(w, editable) {
         (w.notes ? '<div class="item-meta">' + esc(w.notes) + '</div>' : '') +
       '</div>' +
       '<div class="item-actions">' +
-        (editable ? '<button class="act-btn" title="Edit" onclick="toggleWordEdit(\'' + esc(w.word) + '\')">&#9998;</button>' : '') +
+        (editable ? '<button class="act-btn" title="Edit" onclick="toggleWordEdit(\'' + esc(w.word) + '\',\'' + prefix + '\')">&#9998;</button>' : '') +
         '<button class="act-btn del" title="Delete" onclick="removeWord(\'' + esc(w.word) + '\')">&#10005;</button>' +
       '</div>' +
     '</div>' +
-    '<div class="item-edit" id="we-' + esc(w.word) + '"></div>' +
+    '<div class="item-edit" id="' + prefix + '-' + esc(w.word) + '"></div>' +
   '</div>';
 }
 
@@ -412,7 +414,7 @@ function renderAddRecent() {
   const hidden = data.words.length - last5.length;
   const c = document.getElementById('add-recent-list');
   if (!last5.length) { c.innerHTML = '<div class="empty" style="padding:1rem 0;">No words yet.</div>'; return; }
-  c.innerHTML = last5.map(w => wordItemHTML(w, false)).join('') +
+  c.innerHTML = last5.map(w => wordItemHTML(w, false, 'wr')).join('') +
     (hidden > 0 ? '<div class="more-hint">+ ' + hidden + ' more — see all in the Words tab</div>' : '');
 }
 
@@ -427,7 +429,7 @@ function renderWordsTab() {
   document.getElementById('words-tab-count').textContent = data.words.length;
   const c = document.getElementById('words-tab-list');
   if (!shown.length) { c.innerHTML = '<div class="empty">' + (query ? 'No results for "' + esc(query) + '".' : 'No words yet.') + '</div>'; return; }
-  c.innerHTML = shown.map(w => wordItemHTML(w, true)).join('') +
+  c.innerHTML = shown.map(w => wordItemHTML(w, true, 'wt')).join('') +
     (hidden > 0 ? '<div class="more-hint">Showing last 10 of ' + filtered.length + ' — use the search bar to find older words</div>' : '');
 }
 
@@ -436,12 +438,12 @@ function renderSentences() {
   document.getElementById('sentence-count').textContent = data.sentences.length;
   const c = document.getElementById('sentence-list-container');
   if (!data.sentences.length) { c.innerHTML = '<div class="empty">No sentences yet. Practice to add some.</div>'; return; }
-  let indexed = data.sentences.map((s, i) => ({ ...s, origIdx: i })).reverse();
-  if (query) indexed = indexed.filter(s => s.sentence.toLowerCase().includes(query) || s.word.toLowerCase().includes(query));
+  let indexed = data.sentences.map((s, i) => ({ s, origIdx: i })).reverse();
+  if (query) indexed = indexed.filter(({s}) => s.sentence.toLowerCase().includes(query) || s.word.toLowerCase().includes(query));
   const shown = query ? indexed : indexed.slice(0, 10);
   const hidden = (!query && indexed.length > 10) ? indexed.length - 10 : 0;
   if (!shown.length) { c.innerHTML = '<div class="empty">No results for "' + esc(query) + '".</div>'; return; }
-  c.innerHTML = shown.map(s =>
+  c.innerHTML = shown.map(({s, origIdx}) =>
     '<div class="item-card">' +
       '<div class="item-view">' +
         '<div class="item-body">' +
@@ -449,11 +451,11 @@ function renderSentences() {
           '<div class="item-meta">word: <strong>' + esc(s.word) + '</strong> &middot; ' + new Date(s.date).toLocaleDateString() + '</div>' +
         '</div>' +
         '<div class="item-actions">' +
-          '<button class="act-btn" title="Edit" onclick="toggleSentenceEdit(' + s.origIdx + ')">&#9998;</button>' +
-          '<button class="act-btn del" title="Delete" onclick="removeSentence(' + s.origIdx + ')">&#10005;</button>' +
+          '<button class="act-btn" title="Edit" onclick="toggleSentenceEdit(' + origIdx + ')">&#9998;</button>' +
+          '<button class="act-btn del" title="Delete" onclick="removeSentence(' + origIdx + ')">&#10005;</button>' +
         '</div>' +
       '</div>' +
-      '<div class="item-edit" id="se-' + s.origIdx + '"></div>' +
+      '<div class="item-edit" id="se-' + origIdx + '"></div>' +
     '</div>'
   ).join('') + (hidden > 0 ? '<div class="more-hint">Showing last 10 of ' + indexed.length + ' — use the search bar to find older sentences</div>' : '');
 }
